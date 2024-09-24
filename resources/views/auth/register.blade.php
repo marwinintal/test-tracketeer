@@ -46,7 +46,7 @@
                         </div>
                     </div>
 
-                    <Label>Address 1</Label>
+                    <Label>Address</Label>
                     <div class="form-group">
                         <input type="text" name="address_1" id="address_1" class="form-control" placeholder="Address 1">
                     </div>
