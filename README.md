@@ -64,3 +64,27 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+# Laravel Project
+
+## Overview
+
+This is a Laravel application designed for Trackerteer Developer Assessment Exam. 
+
+## Requirements
+
+- PHP >= 8.1.5
+- Composer
+- Database (MySQL)
+
+## Installation
+
+Follow these steps to get your Laravel project up and running:
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/marwinintal/test-tracketeer.git
+cd test-tracketeer
+
+
