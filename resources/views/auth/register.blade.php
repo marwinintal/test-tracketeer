@@ -2,6 +2,8 @@
 @section('title', 'Register')
 @section('content')
     <div class="container">
+        <div id="response-message"></div>
+
         <div class="card">
             <div class="card-header">Register</div>
             <div class="card-body">
@@ -73,7 +75,6 @@
             </div>
         </div>
 
-        <div id="response-message"></div>
     </div>
 @endsection
 @push('scripts')
@@ -82,7 +83,6 @@
         $(document).ready(function() {
             $('#register-form').on('submit', function(e) {
                 e.preventDefault();
-
                 $.ajax({
                     headers: {
                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -92,7 +92,7 @@
                     data: $(this).serialize(),
                     success: function(response) {
                         if (!response.success) {
-                            $('#response-message').html(`<p style="color: red;">${response.message}</p>`);
+                            $('#response-message').html(`<div class="alert alert-danger" role="alert">${response.message}</div>`);
                             return;
                         }
 
@@ -106,7 +106,7 @@
                                 errorMessage += `<li>${value[0]}</li>`;
                             });
                             errorMessage += '</ul>';
-                            $('#response-message').html(`<p style="color: red;">${errorMessage}</p>`);
+                            $('#response-message').html(`<div class="alert alert-danger" role="alert">${errorMessage}</div>`);
                         } else {
                             $('#response-message').html('<p style="color: red;">An unexpected error occurred. Please try again.</p>');
                         }

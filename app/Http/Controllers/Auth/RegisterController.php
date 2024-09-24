@@ -57,6 +57,9 @@ class RegisterController extends Controller
         ]);
     }
 
+    /**
+     * Validate the inputs
+     */
     protected function validator(array $data)
     {
         return Validator::make($data, [

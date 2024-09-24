@@ -13,10 +13,6 @@ class ThankYouForRegistrationEmail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    use Queueable, SerializesModels;
-
-    use Queueable, SerializesModels;
-
     public $user;
 
     public function __construct($user)
@@ -26,7 +22,6 @@ class ThankYouForRegistrationEmail extends Mailable
 
     public function build()
     {
-        return $this->subject('Thank You!')
-                    ->view('emails.thank-you-for-regisration'); // Ensure this view exists
+        return $this->subject('Thank You!')->view('emails.thank-you-for-regisration');
     }
 }

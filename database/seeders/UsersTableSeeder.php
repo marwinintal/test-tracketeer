@@ -29,7 +29,7 @@ class UsersTableSeeder extends Seeder
                 'name' => 'John Doe',
                 'email' => 'john@example.com',
                 'username' => 'johndoe',
-                'password' => Hash::make('password123'), // Hash the password
+                'password' => Hash::make('password'), // Hash the password
                 'remember_token' => Str::random(10),
             ],
             [
@@ -37,7 +37,7 @@ class UsersTableSeeder extends Seeder
                 'name' => 'Jane Smith',
                 'email' => 'jane@example.com',
                 'username' => 'janesmith',
-                'password' => Hash::make('password123'),
+                'password' => Hash::make('password'),
                 'remember_token' => Str::random(10),
             ],
         ];
