@@ -25,8 +25,8 @@ class UserSubjectSeeder extends Seeder
 
         // Attach subjects to users
         foreach ($users as $user) {
-            // Randomly attach between 1 to 3 subjects to each user
-            $random_subjects = $subjects->random(rand(1, 6))->pluck('id')->toArray();
+            // Randomly attach between 3 to 6 subjects to each user
+            $random_subjects = $subjects->random(rand(3, 6))->pluck('id')->toArray();
             foreach ($random_subjects as $random_subject) {
                 $generated_subjects[] = [
                     'id' => Str::uuid()->toString(),
