@@ -10,6 +10,7 @@ This is a Laravel application designed for Trackerteer Developer Assessment Exam
 - Composer
 - Database (MySQL)
 - Email Delivery Platform (MailTrap)
+![alt text](image.png)
 
 ## Installation
 
@@ -72,3 +73,10 @@ php artisan db:seed
 ### 9. Serve the application:
 
 php artisan serve
+
+```
+### Note
+
+Note: In your browser to test the [one to many] and [many to many]. You can log in using the seeded user:
+“* **Username**: `johndoe` * **Password**: `password`”
+
